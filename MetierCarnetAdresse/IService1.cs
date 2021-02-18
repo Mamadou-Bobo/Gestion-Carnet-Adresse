@@ -46,6 +46,12 @@ namespace MetierCarnetAdresse
         [OperationContract]
         List<contact> searchContact(string recherche);
 
+        [OperationContract]
+        void logError(string error);
+
+        [OperationContract]
+        string showErrorMessage(string error);
+
     }
 
 

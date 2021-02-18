@@ -138,4 +138,30 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="logError">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="logErrorResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="showErrorMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="showErrorMessageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="showErrorMessageResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

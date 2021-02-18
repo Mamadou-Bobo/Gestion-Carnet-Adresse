@@ -23,13 +23,9 @@ namespace CarnetAdresseApp
         private void frmReportCarnetAdresse_Load(object sender, EventArgs e)
         {
             rptCarnetAdresse objRpt = new rptCarnetAdresse();
-            if(!objRpt.Equals(null))
-            {
-                objRpt.SetDataSource(GetTableListContact());
-                crystalReportViewer1.ReportSource = objRpt;
-                crystalReportViewer1.Refresh();
-            }
-           
+            objRpt.SetDataSource(GetTableListContact());
+            crystalReportViewer1.ReportSource = objRpt;
+            crystalReportViewer1.Refresh();
         }
 
         public DataTable GetTableListContact()
@@ -63,7 +59,7 @@ namespace CarnetAdresseApp
 
                 } catch(Exception ex)
                 {
-                    this.Close();
+                    Console.WriteLine(ex);
                 }
             }
 

@@ -89,5 +89,15 @@ namespace CarnetAdresseApp.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_send_to_printer_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-send-to-printer-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

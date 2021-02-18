@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -51,7 +52,7 @@ namespace MetierCarnetAdresse
             catch (Exception ex)
             {
                 rep = false;
-                Console.WriteLine(ex);
+                logError(ex.ToString());
             }
             return rep;
         }
@@ -84,7 +85,7 @@ namespace MetierCarnetAdresse
             catch (Exception ex)
             {
                 rep = false;
-                Console.WriteLine(ex);
+                logError(ex.ToString());
             }
 
             return rep;
@@ -124,7 +125,8 @@ namespace MetierCarnetAdresse
             catch (Exception ex)
             {
                 rep = false;
-                Console.WriteLine(ex);
+                logError(ex.ToString());
+
             }
 
             return rep;
@@ -147,7 +149,7 @@ namespace MetierCarnetAdresse
             } catch(Exception ex)
             {
                 rep = false;
-                Console.WriteLine(ex);
+                logError(ex.ToString());
             }
 
             return rep;
@@ -177,17 +179,31 @@ namespace MetierCarnetAdresse
                 contacts = contacts.Where(c =>
                                       c.prenom.ToUpper()
                                       .Contains(recherche.ToUpper())).ToList();
-            } 
-
-            //if (!string.IsNullOrEmpty(nom))
-            //{
-            //    contacts = contacts.Where(c =>
-            //                              c.nom.ToUpper()
-            //                              .Contains(nom.ToUpper())).ToList();
-            //}
-
+            }
 
             return contacts;
+        }
+
+        public void logError(string error)
+        {
+            try
+            {
+                System.IO.FileStream wFile;
+                byte[] byteData = null;
+                byteData = Encoding.ASCII.GetBytes(error);
+                wFile = new FileStream(".\\errorFile.txt", FileMode.Append);
+                wFile.Write(byteData, 0, byteData.Length);
+                wFile.Close();
+            }
+            catch (IOException ex)
+            {
+                showErrorMessage(ex.ToString());
+            }
+        }
+
+        public string showErrorMessage(string error)
+        {
+            return error;
         }
     }
 }

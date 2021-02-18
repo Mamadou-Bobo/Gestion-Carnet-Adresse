@@ -339,6 +339,18 @@ namespace CarnetAdresseApp.ServiceCarnetAdresse {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/searchContact", ReplyAction="http://tempuri.org/IService1/searchContactResponse")]
         System.Threading.Tasks.Task<CarnetAdresseApp.ServiceCarnetAdresse.contact[]> searchContactAsync(string recherche);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/logError", ReplyAction="http://tempuri.org/IService1/logErrorResponse")]
+        void logError(string error);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/logError", ReplyAction="http://tempuri.org/IService1/logErrorResponse")]
+        System.Threading.Tasks.Task logErrorAsync(string error);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/showErrorMessage", ReplyAction="http://tempuri.org/IService1/showErrorMessageResponse")]
+        string showErrorMessage(string error);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/showErrorMessage", ReplyAction="http://tempuri.org/IService1/showErrorMessageResponse")]
+        System.Threading.Tasks.Task<string> showErrorMessageAsync(string error);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -446,6 +458,22 @@ namespace CarnetAdresseApp.ServiceCarnetAdresse {
         
         public System.Threading.Tasks.Task<CarnetAdresseApp.ServiceCarnetAdresse.contact[]> searchContactAsync(string recherche) {
             return base.Channel.searchContactAsync(recherche);
+        }
+        
+        public void logError(string error) {
+            base.Channel.logError(error);
+        }
+        
+        public System.Threading.Tasks.Task logErrorAsync(string error) {
+            return base.Channel.logErrorAsync(error);
+        }
+        
+        public string showErrorMessage(string error) {
+            return base.Channel.showErrorMessage(error);
+        }
+        
+        public System.Threading.Tasks.Task<string> showErrorMessageAsync(string error) {
+            return base.Channel.showErrorMessageAsync(error);
         }
     }
 }

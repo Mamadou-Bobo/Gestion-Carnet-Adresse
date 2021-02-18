@@ -37,12 +37,6 @@ namespace CarnetAdresseApp
             loadData();
         }
 
-        private void btnAjouter_Click(object sender, EventArgs e)
-        {
-            frmAjoutContact f = new frmAjoutContact();
-            f.Show();
-        }
-
         private void dgContacts_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if(dgContacts.Columns[e.ColumnIndex].Name == "Supprimer")
@@ -71,15 +65,7 @@ namespace CarnetAdresseApp
 
                 f.Show();
             }
-        }
-
-        private void gunaAdvenceButton1_Click(object sender, EventArgs e)
-        {
-            frmAjoutNumero f = new frmAjoutNumero();
-            f.Show();
-        }
-
-      
+        }  
 
         private void btnImprimer_Click(object sender, EventArgs e)
         {
@@ -87,14 +73,32 @@ namespace CarnetAdresseApp
             f.Show();
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnSearch_Click_1(object sender, EventArgs e)
         {
             dgContacts.DataSource = service.searchContact(txtRecherche.Text);
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnAjouterContact_Click(object sender, EventArgs e)
         {
-            this.Close();
+            frmAjoutContact f = new frmAjoutContact();
+            f.Show();
+            
+        }
+
+        private void btnAjouterNumero_Click(object sender, EventArgs e)
+        {
+            frmAjoutNumero f = new frmAjoutNumero();
+            f.Show();
+        }
+
+        private void cbbColors_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dgContacts.Theme = (Guna.UI.WinForms.GunaDataGridViewPresetThemes)cbbColors.SelectedIndex;
         }
     }
 
