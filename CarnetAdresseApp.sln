@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarnetAdresseApp", "CarnetAdresseApp\CarnetAdresseApp.csproj", "{63B4634C-9E88-428C-9E25-43D8007F1EAB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{92A7EC67-0EF3-4A11-959A-27626C6B2426} = {92A7EC67-0EF3-4A11-959A-27626C6B2426}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetierCarnetAdresse", "MetierCarnetAdresse\MetierCarnetAdresse.csproj", "{92A7EC67-0EF3-4A11-959A-27626C6B2426}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63B4634C-9E88-428C-9E25-43D8007F1EAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63B4634C-9E88-428C-9E25-43D8007F1EAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63B4634C-9E88-428C-9E25-43D8007F1EAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63B4634C-9E88-428C-9E25-43D8007F1EAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92A7EC67-0EF3-4A11-959A-27626C6B2426}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92A7EC67-0EF3-4A11-959A-27626C6B2426}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92A7EC67-0EF3-4A11-959A-27626C6B2426}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92A7EC67-0EF3-4A11-959A-27626C6B2426}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FAC4E1ED-969B-4341-9759-0AD6CF49FA4E}
+	EndGlobalSection
+EndGlobal
